@@ -2,7 +2,7 @@
 
 By [Jeffrey Ouyang-Zhang](https://jozhang97.github.io/),  [Jang Hyun Cho](https://sites.google.com/view/janghyuncho/), [Xingyi Zhou](https://www.cs.utexas.edu/~zhouxy/), [Philipp Krähenbühl](http://www.philkr.net/)
 
-This repository is an official implementation of the paper [NMS Strikes Back](TODO).
+This repository is an official implementation of the paper [NMS Strikes Back](https://arxiv.org/abs/2212.06137).
 
 
 **TL; DR.** **De**tection **T**ransformers with **A**ssignment (DETA) re-introduce IoU assignment and NMS for transformer-based detectors. DETA trains and tests comparibly as fast as Deformable-DETR and converges much faster (50.2 mAP in 12 epochs on COCO).
@@ -92,10 +92,10 @@ This project builds heavily off of [Deformable-DETR](https://github.com/fundamen
 If you find DETA useful in your research, please consider citing:
 
 ```bibtex
-@article{TODO,
+@article{ouyangzhang2022nms,
   title={NMS Strikes Back},
-  author={Ouyang-Zhang, Jeffrey and Cho, Jang Hyun and Zhou, Xingyi and Krähenbühl, Philipp},
-  journal={arXiv preprint arXiv:TODO},
+  author={Ouyang-Zhang, Jeffrey and Cho, Jang Hyun and Zhou, Xingyi and Kr{\"a}henb{\"u}hl, Philipp},
+  journal={arXiv preprint arXiv:2212.06137},
   year={2022}
 }
 ```
