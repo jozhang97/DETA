@@ -32,6 +32,7 @@ DETR's one-to-one bipartite matching |  Our many-to-one IoU-based assignment
 ## Installation
 
 Please follow instructions from [Deformable-DETR](https://github.com/fundamentalvision/Deformable-DETR) for installation, data preparation, and additional usage examples.
+Tested on torch1.8.0+cuda10.1 and torch1.6.0+cuda9.2 and torch1.11.0+cuda11.3
 
 ## Usage
 
