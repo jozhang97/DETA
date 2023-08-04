@@ -486,11 +486,12 @@ class NMSPostProcess(nn.Module):
             score = all_scores[b]
             lbls = all_labels[b]
 
-            pre_topk = score.topk(10000).indices
-            box = box[pre_topk]
-            score = score[pre_topk]
-            lbls = lbls[pre_topk]
-
+            if n_queries * n_cls > 10000:
+                pre_topk = score.topk(10000).indices
+                box = box[pre_topk]
+                score = score[pre_topk]
+                lbls = lbls[pre_topk]
+                
             keep_inds = batched_nms(box, score, lbls, 0.7)[:100]
             results.append({
                 'scores': score[keep_inds],
