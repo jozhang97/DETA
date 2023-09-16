@@ -199,7 +199,7 @@ class DeformableTransformer(nn.Module):
                     # keep top Q/L indices for L levels
                     q_per_l = topk // len(spatial_shapes)
                     is_level_ordered = level_ids[keep_inds][None] == torch.arange(len(spatial_shapes), device=level_ids.device)[:,None]  # LS
-                    keep_inds_mask = is_level_ordered & (is_level_ordered.cumsum(1) <= q_per_l)  # LS
+                    keep_inds_mask = is_level_ordered & (is_level_ordered.float().cumsum(1) <= q_per_l)  # LS
                     keep_inds_mask = keep_inds_mask.any(0)  # S
 
                     # pad to Q indices (might let ones filtered from pre-nms sneak by... unlikely because we pick high conf anyways)

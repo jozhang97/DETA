@@ -2,3 +2,6 @@ pycocotools
 tqdm
 cython
 scipy
+onnx
+onnxruntime
+onnxsim
